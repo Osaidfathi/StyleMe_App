@@ -6,7 +6,7 @@
       "src": "workspace/shadcn-ui/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": "workspace/shadcn-ui/dist"
       }
     },
     {
@@ -21,7 +21,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "workspace/shadcn-ui/dist/index.html"
     }
   ]
 }
