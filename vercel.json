@@ -4,10 +4,9 @@
   "builds": [
     {
       "src": "workspace/shadcn-ui/package.json",
-      "use": "@vercel/node",
+      "use": "@vercel/static-build",
       "config": {
-        "buildCommand": "npm install && npm run build",
-        "outputDirectory": "dist"
+        "distDir": "dist"
       }
     },
     {
@@ -22,7 +21,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "workspace/shadcn-ui/dist/$1"
+      "dest": "/index.html"
     }
   ]
 }
